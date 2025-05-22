@@ -1,0 +1,77 @@
+body {
+  background-color: #020631;
+}
+
+.parts {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.app h1,
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.addTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app .input {
+  margin-top: 0.8em;
+  width: 20em;
+  height: 2em;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.app .input input {
+  width: 100%;
+  height: 1.6em;
+  border-color: transparent;
+  outline-color: transparent;
+}
+
+.app .todos .todo {
+  margin-top: 0.8em;
+  width: 20em;
+  height: 2em;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.column {
+  width: 30%;
+  min-height: 200px;
+  background-color: #d8d6d6;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.column h4 {
+  margin-bottom: 1em;
+}
+
+.todo .right button {
+  margin-right: 0.5em;
+  padding: 0.3em 0.6em;
+  font-size: 0.75em;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(8, 195, 29);
+  color: white;
+  border-radius: 4px;
+}
+
