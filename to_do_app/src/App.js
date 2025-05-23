@@ -5,9 +5,12 @@ function App() {
   const [toDo, setToDo] = useState('');
   const [toDos, setToDos] = useState([]);
 
+  const now = new Date();
+  const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
   const addTask = () => {
     if (toDo.trim() !== '') {
-      setToDos([...toDos, { id: Date.now(), text: toDo, status: 'todo' }]);
+      setToDos([...toDos, { id: Date.now(), text: toDo,time: time, status: 'todo' }]);
       setToDo('');
     }
   };
@@ -57,8 +60,13 @@ function App() {
                     <span>{}</span>
                   </div>
                   <div className="right">
-                    <button onClick={() => changeStatus(task.id, 'inprogress')}>Start</button>
-                    <i onClick={() => deleteTask(task.id)} className="fas fa-times"></i>
+                    <div className="time">
+                      <span><p>{ task.time }</p></span>
+                    </div>
+                    <div className="buttons">
+                      <button onClick={() => changeStatus(task.id, 'inprogress')}>Start</button>
+                      <i onClick={() => deleteTask(task.id)} className="fas fa-times"></i>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -77,6 +85,9 @@ function App() {
                     <p>{task.text}</p>
                   </div>
                   <div className="right">
+                    <div className="time">
+                      <span><p>{ task.time }</p></span>
+                    </div>
                     <button onClick={() => changeStatus(task.id, 'completed')}>Complete</button>
                     <i onClick={() => deleteTask(task.id)} className="fas fa-times"></i>
                   </div>
@@ -97,6 +108,9 @@ function App() {
                     <p>{task.text}</p>
                   </div>
                   <div className="right">
+                    <div className="time">
+                      <span><p>{ task.time }</p></span>
+                    </div>
                     <i onClick={() => deleteTask(task.id)} className="fas fa-times"></i>
                   </div>
                 </div>

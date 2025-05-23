@@ -64,6 +64,15 @@ h2 {
   margin-bottom: 1em;
 }
 
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.time p {
+  font-size: small;
+}
+
 .todo .right button {
   margin-right: 0.5em;
   padding: 0.3em 0.6em;
